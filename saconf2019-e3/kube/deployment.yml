@@ -19,9 +19,9 @@ spec:
         image: laurentiuspilca/saconf2019-e3:v1
       - env:
         - name: MY_SECRET_NAME
-            valueFrom:
-              secretKeyRef:
-                name: saconf2019-ex3-secret
-                key: my.secret.name
+          valueFrom:
+            secretKeyRef:
+              name: saconf2019-ex3-secret
+              key: my.secret.name
         ports:
         - containerPort: 8080
