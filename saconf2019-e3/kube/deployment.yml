@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: secret-app-deployment
   labels:
-    app: hello
+    app: secret-app
 spec:
   replicas: 1
   selector:
