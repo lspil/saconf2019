@@ -10,6 +10,6 @@ spec:
     spec:
       containers:
       - name: hello
-        image: laurentiuspilca/qw-test1
+        image: laurentiuspilca/qw-test1:v2
         ports:
         - containerPort: 8080
