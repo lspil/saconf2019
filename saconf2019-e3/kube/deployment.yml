@@ -15,15 +15,13 @@ spec:
         app: secret-app
     spec:
       containers:
-      - name: hello
+      - name: secret-app
         image: laurentiuspilca/saconf2019-e3:v1
-        volumeMounts:
-            - name: secret-data
-              mountPath: "/etc/secret-data"
-              readOnly: true
+      - env:
+        - name: MY_SECRET_NAME
+            valueFrom:
+              secretKeyRef:
+                name: saconf2019-ex3-secret
+                key: my.secret.name
         ports:
         - containerPort: 8080
-      volumes:
-        - name: secret-data
-          secret:
-            secretName: saconf2019-ex3-secret
