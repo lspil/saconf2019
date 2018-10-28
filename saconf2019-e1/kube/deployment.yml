@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-app-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  template:
+      metadata:
+        labels:
+          app: hello-app
+      spec:
+        containers:
+        - name: hello-app
+          image: laurentiuspilca/qw-test1
+          ports:
+          - containerPort: 8080
