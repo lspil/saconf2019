@@ -1,21 +1,29 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-deployment
+  name: secret-app-deployment
   labels:
     app: hello
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello
+      app: secret-app
   template:
     metadata:
       labels:
-        app: hello
+        app: secret-app
     spec:
       containers:
       - name: hello
-        image: laurentiuspilca/saconf2019-e1:v1
+        image: laurentiuspilca/saconf2019-e3:v1
+        volumeMounts:
+            - name: secret-data
+              mountPath: "/etc/secret-data"
+              readOnly: true
         ports:
         - containerPort: 8080
+      volumes:
+        - name: secret-data
+          secret:
+            secretName: saconf2019-ex3-secret

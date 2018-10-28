@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: hello-service
+  name: secret-app-service
 spec:
   selector:
-    app: hello
+    app: secret-app
   ports:
   - protocol: TCP
     port: 8080
