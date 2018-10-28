@@ -1,21 +1,21 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-deployment
+  name: nginx-deployment
   labels:
-    app: hello
+    app: nginx
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: hello
+      app: nginx
   template:
     metadata:
       labels:
-        app: hello
+        app: nginx
     spec:
       containers:
-      - name: hello
-        image: laurentiuspilca/qw-test1
+      - name: nginx
+        image: nginx:1.15.4
         ports:
-        - containerPort: 8080
+        - containerPort: 80
