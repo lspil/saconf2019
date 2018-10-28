@@ -5,7 +5,7 @@ metadata:
   labels:
     app: stateful-app
 spec:
-  replicas: 1
+  replicas: 10
   selector:
     matchLabels:
       app: stateful-app
