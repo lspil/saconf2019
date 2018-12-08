@@ -1,1 +1,1 @@
-ALTER TABLE user ADD COLUMN password VARCHAR(500) AFTER name;
+ALTER TABLE user ADD COLUMN password VARCHAR(500) AFTER username;
