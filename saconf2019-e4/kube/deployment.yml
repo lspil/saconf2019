@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-with-sql-persistence-deployment
+  labels:
+    app: app-with-sql-persistence-deployment
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: app-with-sql-persistence-deployment
+  template:
+    metadata:
+      labels:
+        app: app-with-sql-persistence-deployment
+    spec:
+      containers:
+      - name: app-with-sql-persistence-deployment
+        image: laurentiuspilca/saconf2019-e4:v1
+        ports:
+        - containerPort: 8080
