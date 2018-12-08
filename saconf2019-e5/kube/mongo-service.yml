@@ -5,9 +5,9 @@ metadata:
  labels:
   name: mongo
 spec:
- ports:
+  selector:
+    role: mongo
+  ports:
   - port: 27017
     targetPort: 27017
- clusterIP: None
- selector:
-  role: mongo
+  type: LoadBalancer
