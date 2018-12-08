@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: app-with-sql-persistence-deployment
+  name: app-with-sql-persistence-service
 spec:
   selector:
     app: app-with-sql-persistence-deployment
