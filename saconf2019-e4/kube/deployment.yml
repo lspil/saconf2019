@@ -5,7 +5,7 @@ metadata:
   labels:
     app: app-with-sql-persistence-deployment
 spec:
-  replicas: 10
+  replicas: 1
   selector:
     matchLabels:
       app: app-with-sql-persistence-deployment
