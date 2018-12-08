@@ -17,5 +17,21 @@ spec:
       containers:
       - name: app-with-sql-persistence-deployment
         image: laurentiuspilca/saconf2019-e4:v1
+        env:
+          - name: spring.datasource.url
+            valueFrom:
+              secretKeyRef:
+                name: saconf2019-e4-secret
+                key: spring.datasource.url
+          - name: spring.datasource.url
+            valueFrom:
+              secretKeyRef:
+                name: saconf2019-e4-secret
+                key: spring.datasource.username
+          - name: spring.datasource.url
+            valueFrom:
+              secretKeyRef:
+                name: saconf2019-e4-secret
+                key: spring.datasource.password
         ports:
         - containerPort: 8080
