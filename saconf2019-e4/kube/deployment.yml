@@ -23,12 +23,12 @@ spec:
               secretKeyRef:
                 name: saconf2019-e4-secret
                 key: spring.datasource.url
-          - name: spring.datasource.url
+          - name: spring.datasource.username
             valueFrom:
               secretKeyRef:
                 name: saconf2019-e4-secret
                 key: spring.datasource.username
-          - name: spring.datasource.url
+          - name: spring.datasource.password
             valueFrom:
               secretKeyRef:
                 name: saconf2019-e4-secret
