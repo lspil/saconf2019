@@ -25,6 +25,11 @@ spec:
                   - MainRepSet
               topologyKey: kubernetes.io/hostname
       terminationGracePeriodSeconds: 10
+      volumes:
+        - name: secrets-volume
+          secret:
+            secretName: shared-bootstrap-data
+            defaultMode: 256
       containers:
         - name: mongod-container
           #image: pkdone/mongo-ent:3.4
@@ -53,6 +58,9 @@ spec:
           ports:
             - containerPort: 27017
           volumeMounts:
+            - name: secrets-volume
+              readOnly: true
+              mountPath: /etc/secrets-volume
             - name: mongodb-persistent-storage-claim
               mountPath: /data/db
   volumeClaimTemplates:
