@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: health-check-app-deployment
+spec:
+  selector:
+    app: health-check-app-deployment
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+  type: LoadBalancer
