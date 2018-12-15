@@ -25,18 +25,20 @@ spec:
           containerPort: 8081
           protocol: TCP
         livenessProbe:
-          httpGet: /actuator/health
-          port: 8081
-          scheme: HTTP
+          httpGet:
+            path: /actuator/health
+            port: 8081
+            scheme: HTTP
           initialDelaySeconds: 60
           timeoutSeconds: 5
           periodSeconds: 20
           successThreshold: 1
           failureThreshold: 3
         readinessProbe:
-          httpGet: /actuator/health
-          port: 8081
-          scheme: HTTP
+          httpGet:
+            path: /actuator/health
+            port: 8081
+            scheme: HTTP
           initialDelaySeconds: 60
           timeoutSeconds: 5
           periodSeconds: 20
