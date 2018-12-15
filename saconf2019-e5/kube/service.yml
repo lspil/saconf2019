@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: health-check-app-deployment
+  name: health-check-app-service
 spec:
   selector:
     app: health-check-app-deployment
