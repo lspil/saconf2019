@@ -19,7 +19,7 @@ spec:
         image: laurentiuspilca/saconf2019-e7-1:v1
         ports:
         - containerPort: 8080
-	  - name: app2
+      - name: app2
         image: laurentiuspilca/saconf2019-e7-2:v1
         ports:
         - containerPort: 9090
