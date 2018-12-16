@@ -6,14 +6,10 @@ spec:
   scaleTargetRef:
     kind: Deployment
     name: autoscaling-app-deployment
-  minReplicas: 2
+  minReplicas: 1
   maxReplicas: 10
   metrics:
   - type: Resource
     resource:
       name: cpu
-      targetAverageUtilization: 80
-  - type: Resource
-    resource:
-      name: memory
-      targetAverageValue: 200Mi
+      targetAverageUtilization: 30
