@@ -4,6 +4,7 @@ metadata:
   name: podinfo
 spec:
   scaleTargetRef:
+    apiVersion: extensions/v1beta1
     kind: Deployment
     name: autoscaling-app-deployment
   minReplicas: 1
