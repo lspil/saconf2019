@@ -16,9 +16,9 @@ public class Saconf2019E8Application {
 	Logger logger = LoggerFactory.getLogger(Saconf2019E8Application.class);
 
 	@GetMapping("/test")
-	public String stress() throws InterruptedException {
+	public String stress() {
 		for (int i=0 ;i<100000; i++) {
-			Thread.sleep(100);
+			double x = Math.random() * i;
 			logger.info("Iteration {} at {}" ,i , LocalDateTime.now());
 		}
 		return "ok";
