@@ -7,10 +7,10 @@ spec:
     apiVersion: extensions/v1beta1
     kind: Deployment
     name: autoscaling-app-deployment
-  minReplicas: 1
+  minReplicas: 2
   maxReplicas: 10
   metrics:
   - type: Resource
     resource:
       name: cpu
-      targetAverageUtilization: 30
+      targetAverageUtilization: 5
