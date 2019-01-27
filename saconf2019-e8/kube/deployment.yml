@@ -19,3 +19,10 @@ spec:
         image: laurentiuspilca/saconf2019-e8:v1
         ports:
         - containerPort: 8080
+        resources:
+          limits:
+		    cpu: 300m
+            memory: 200Mi
+          requests:
+		    cpu: 100m
+            memory: 100Mi
