@@ -1,7 +1,7 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: podinfo
+  name: ex8-pod-autoscaler
 spec:
   scaleTargetRef:
     apiVersion: extensions/v1beta1
