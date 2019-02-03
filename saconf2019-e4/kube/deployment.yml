@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: app-with-sql-persistence-deployment
-        image: laurentiuspilca/saconf2019-e4:v2
+        image: laurentiuspilca/saconf2019-e4:v1
         env:
           - name: spring.datasource.url
             valueFrom:
